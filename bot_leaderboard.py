@@ -56,7 +56,7 @@ def get_all_bots_ratings():
                 'disabled': user.get('disabled')
             })
 
-    with open('lichess_bot_leaderboard.json', 'w') as f:
+    with open('bot_leaderboard.json', 'w') as f:
         json.dump(all_bots_ratings, f)
     print("Updated bot_leaderboard.json file.")
 
