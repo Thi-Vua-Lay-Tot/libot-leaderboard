@@ -34,15 +34,15 @@ def lichess_type(type_name):
     else:
         return "Invalid type", 404
         
-@app.route('/lichess')
+@app.route('/lishogi')
 def lishogi():
     return send_file('html/lishogi.html')
 
-@app.route('/lishogi')
+@app.route('/playstrategy')
 def playstrategy():
     return send_file('html/playstrategy.html')
 
-@app.route('/lichess')
+@app.route('/lidraughts')
 def lidraughts():
     return send_file('html/lidraughts.html')
 
