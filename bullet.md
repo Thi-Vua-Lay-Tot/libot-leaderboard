@@ -1,0 +1,13 @@
+Rank|Bot|Rating
+---|---|---
+#1|Viet-AI|2930
+#2|Hien-Vinh_Bot2|2857
+#3|bluefake|2842
+#4|Viet_BOT|2787
+#5|Viet-BOT|2775
+#6|Vinh_VariantsBot|2695
+#7|gam3play3r-BOT|2691
+#8|Viet-Robot|2504
+#9|BOT_DinhHoangViet|2385
+#10|TungJohn|2212
+#11|TungJohnPlayingChess|2157
