@@ -12,10 +12,7 @@ css_styles = """
   <link rel="icon" href="https://raw.githubusercontent.com/Thi-Vua-Lay-Tot/libot-leaderboard/master/images/favicon.ico" type="image/x-icon" />
   <header>
             <nav>
-                <a href="./">Trang chủ</a>
-                <a href="./about.html">Giới thiệu</a>
-                <a href="./danhsach.html">Các danh sách</a>
-                <a href="./webs.html">Các trang mạng</a>
+                <a href="./index.html">< Quay lại</a>
             </nav>
         </header>
   <style>
