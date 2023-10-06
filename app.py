@@ -23,27 +23,28 @@ TYPES = [
 def welcome_page():
     return send_file('html/Home.html')
 
-@app.route('/bot')
-def bot():
-    return send_file('html/Bot.html')
+@app.route('/lichess')
+def lichess():
+    return send_file('html/lichess.html')
 
-@app.route('/unrestricted')
-def unrestricted():
-    return send_file('html/Unrestricted.html')
-
-@app.route('/bot/<type_name>')
-def bot_type(type_name):
+@app.route('/lichess/<type_name>')
+def lichess_type(type_name):
     if type_name in TYPES:
-        return send_file(f'bot_leaderboard/{type_name}.html')
+        return send_file(f'./{type_name}.html')
     else:
         return "Invalid type", 404
+        
+@app.route('/lichess')
+def lishogi():
+    return send_file('html/lishogi.html')
 
-@app.route('/unrestricted/<type_name>')
-def unrestricted_type(type_name):
-    if type_name in TYPES:
-        return send_file(f'unrestricted_bot_leaderboard/{type_name}.html')
-    else:
-        return "Invalid type", 404
+@app.route('/lishogi')
+def playstrategy():
+    return send_file('html/playstrategy.html')
+
+@app.route('/lichess')
+def lidraughts():
+    return send_file('html/lidraughts.html')
 
 if __name__ == "__main__":
     app.run(host="localhost", port=5000)

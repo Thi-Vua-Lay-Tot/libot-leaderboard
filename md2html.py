@@ -9,7 +9,7 @@ css_styles = """
   <script async src="https://stats.chessnibble.com/script.js" data-website-id="8205b599-208b-4d50-be05-5a4bb2f3775d"></script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <link rel="icon" href="https://raw.githubusercontent.com/TheYoBots/libot-lb/master/images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="https://raw.githubusercontent.com/Thi-Vua-Lay-Tot/libot-leaderboard/master/images/favicon.ico" type="image/x-icon" />
   <style>
     .styled-table {
       font-family: "Raleway", sans-serif;
@@ -36,7 +36,7 @@ css_styles = """
     }
     footer {
       font-family: "Raleway", sans-serif;
-      background-color: #f9f9f9;
+      background-color: #00FF00;
       padding: 5px;
       margin-left: auto;
       margin-top: auto;
@@ -52,10 +52,10 @@ css_styles = """
 footer_styles = """
 <footer>
   <p>
-    <a href="https://github.com/TheYoBots/libot-lb">
+    <a href="https://github.com/Thi-Vua-Lay-Tot/libot-leaderboard">
       <img class="github-logo" src="https://github.com/fluidicon.png" alt="GitHub Icon">
     </a>
-    Made by <a href="https://github.com/TheYoBots">Yohaan Seth Nathan</a>
+    Tạo bởi <a href="https://github.com/M-DinhHoangViet">Đinh Hoàng Việt</a>
   </p>
 </footer>
 """
@@ -90,7 +90,7 @@ def markdown_table_to_html(markdown_table):
     html_table += '</table>'
     return html_table
 
-directories = ['bot_leaderboard', 'unrestricted_bot_leaderboard']
+directories = ['.']
 
 for directory in directories:
     for filename in os.listdir(directory):

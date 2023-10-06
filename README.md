@@ -1,42 +1,30 @@
 # libot-lb
-*Based on [lightningbolts/Lichess-Bot-Leaderboards](https://github.com/lightningbolts/Lichess-Bot-Leaderboards)*
+*Dự trên https://github.com/lightningbolts/Lichess-Bot-Leaderboards và https://github.com/TheYoBots/libot-lb*
 
-A leaderboard for all Lichess Bots. It checks for list of online bots using [Lichess' Bot API](https://lichess.org/api#tag/Bot/operation/apiBotOnline) and creates a list ([available_bots.txt](./available_bots.txt)). Everytime it runs this list is checked to see if any online bots aren't in it and if they aren't, those bots are added to the list. Once that's done, using Lichess' API, the [bots public data](https://lichess.org/api#tag/Users/operation/apiUsers) is taken to get the bots rating. This data is converted into `json` format and then each of the [rules](#rules) are checked (This will take a while!) and is then sorted based on rating in each game type (or variant).
+Bảng xếp hạng dành cho tất cả Lichess Bot được tạo từ các video hưóng dẫn cách làm Bot từ TungJohn.
 
-Check it out here: https://lb.chessnibble.com/
+Hãy xem thử tại đây: https://thi-vua-lay-tot.github.io/libot-leaderboard/
 
-## Generating Leaderboard
-1. Set Environment Secret:
+# Tạo bảng xếp hạng
+1. Đặt bí mật môi trường:
 
-Get a [Token from lichess (No scopes required)](https://lichess.org/account/oauth/token/create?scopes[]=None&description=Bot+Leaderboard+Token) and execute the following command:
+Nhận [Mã Token từ lichess (Không yêu cầu phạm vi)](https://lichess.org/account/oauth/token/create?scopes[]=None&description=Bot+Leaderboard+Token) và thực hiện lệnh sau::
 ```
 # windows
-set TOKEN='your-token-here'
+set TOKEN='token-của-bạn'
 
 # linux
 export TOKEN='your-token-here'
 ```
-2. Install dependencies:
+2. Cài đặt dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-3. Execute python script:
+3. Chạy lệnh:
 ```bash
-python3 bot_leaderboard.py
+python bot_leaderboard.py
 ```
 
-## Rules
-#### [Bot Leaderboard](https://lb.chessnibble.com/bot):
-1. Your Bot must not be named in the [Banned Bots List](https://lichess.org/team/banned-of-leaderboard-of-bots) for any of the following reasons:
-   - For "farming" weaker opponents/Bots.
-   - For playing only against human opponents with your Bot.
-   - For playing too often against other Bots that you own/operate (or "siblings").
-   - Or any other reason for which your Bot is listed in [this Lichess Team](https://lichess.org/team/banned-of-leaderboard-of-bots).
-2. Your Bot must have played at least 1 rated game in the week in that respective Variant/Game type.
-3. Your Bot must not have Provisional Rating (with a ?) in that respective Variant/Game type.
-4. Your Bot must not have a mark that indicates violation of [Lichess' Terms of Service](https://lichess.org/terms-of-service).
-5. Your Bot must have played at least 50 rated games in that respective Variant/Game type.
-6. Your Bot must have a rating deviation lower than 75, in Standard Chess, and lower than 65 in Variants.
-#### [Unrestricted Bot Leaderboard](https://lb.chessnibble.com/unrestricted):
-1. Your Bot must have played at least 1 rated game in that respective Variant/Game type.
-2. Your Bot must not have a mark that indicates violation of [Lichess' Terms of Service](https://lichess.org/terms-of-service).
+## Luật để Bot có thể vào BXH
+1. Bot của bạn phải chơi ít nhất 1 trò chơi được xếp hạng trong loại Biến thể/Trò chơi tương ứng đó.
+2. Bot của bạn không được có dấu vi phạm [Điều khoản dịch vụ của Lichess](https://lichess.org/terms-of-service).
