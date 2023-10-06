@@ -3,7 +3,7 @@ import re
 
 css_styles = """
 <head>
-  <title> Lichess Bot Leaderboard </title>
+  <title> Lichess - Bảng xếp hạng </title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script async src="https://stats.chessnibble.com/script.js" data-website-id="8205b599-208b-4d50-be05-5a4bb2f3775d"></script>
