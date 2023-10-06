@@ -21,7 +21,7 @@ TYPES = [
 @app.route('/')
 @app.route('/home')
 def welcome_page():
-    return send_file('html/Home.html')
+    return send_file('index.html')
 
 @app.route('/lichess')
 def lichess():
